@@ -4,7 +4,7 @@ PayPal API Client for Adaptive Payments, Invoice and Express Checkout.
 
 == Installation (Gemfile)
 
-  gem 'paypal-payment', :git => 'vendor@appcepted.com:/home/vendor/pp_paypal'
+  gem 'paypal-payment', :git => 'https://github.com/chardy/paypal-payment.git'
 
 == Usage
 

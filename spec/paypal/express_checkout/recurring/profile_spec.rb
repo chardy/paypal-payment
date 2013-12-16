@@ -14,7 +14,7 @@ describe PayPal::ExpressCheckout::Response::Profile do
       its(:profile_id) { should == "I-1RFWFFS16BF4" }
       its(:auto_bill_outstanding) { should == :next_billing }
       its(:description) { should == "Awesome - Monthly Subscription" }
-      its(:subscriber_name) { should == "Chardy Wang" }
+      its(:subscriber_name) { should == "Chardy%Wang" }
       its(:reference) { should == "1234" }
       its(:max_failed_payments) { should == "1" }
       its(:start_at) { should be_a(Time) }
