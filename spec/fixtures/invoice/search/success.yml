@@ -1,0 +1,174 @@
+--- 
+http_interactions: 
+- request: 
+    method: post
+    uri: https://svcs.sandbox.paypal.com/Invoice/CreateInvoice
+    body: 
+      encoding: UTF-8
+      string: "{\"invoice\":{\"merchantEmail\":\"chardy_1345003248_per@gmail.com\",\"payerEmail\":\"chardy_1345003165_per@gmail.com\",\"itemList\":{\"item\":[{\"name\":\"iPhone 5\",\"quantity\":1,\"unitPrice\":1000.0}]},\"currencyCode\":\"USD\",\"paymentTerms\":\"Net30\"},\"requestEnvelope\":{\"errorLanguage\":\"en_US\",\"detailLevel\":\"ReturnAll\"}}"
+    headers: 
+      User-Agent: 
+      - PayPal::Payment/0.1
+      X-Paypal-Security-Userid: 
+      - chardy_api1.gmail.com
+      X-Paypal-Security-Password: 
+      - "8DTSWBZC7GDR3T4X"
+      X-Paypal-Security-Signature: 
+      - AG-8mOpuFhFyFOYHlaTUYn3Syf15AWJKRnfHMVsmCtC3DK51-ENEPqLS
+      X-Paypal-Request-Data-Format: 
+      - JSON
+      X-Paypal-Response-Data-Format: 
+      - JSON
+      X-Paypal-Application-Id: 
+      - APP-80W284485P519543T
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Date: 
+      - Wed, 06 Feb 2013 15:40:49 GMT
+      Server: 
+      - Apache-Coyote/1.1
+      Cache-Control: 
+      - no-cache
+      X-Paypal-Message-Protocol: 
+      - NONE
+      X-Paypal-Response-Data-Format: 
+      - JSON
+      X-Ebay-Soa-Request-Id: 
+      - 13cb02a9-e120-a486-d657-3927fffff959!Invoice!10.72.109.101![]
+      X-Paypal-Operation-Name: 
+      - CreateInvoice
+      X-Paypal-Service-Name: 
+      - "{http://svcs.paypal.com/types/pt}Invoice"
+      X-Paypal-Service-Version: 
+      - 1.0.0
+      Content-Type: 
+      - application/json;charset=UTF-8
+      Set-Cookie: 
+      - Apache=10.72.109.11.1360165248524753; path=/; expires=Fri, 30-Jan-43 15:40:48 GMT
+      Vary: 
+      - Accept-Encoding
+      Transfer-Encoding: 
+      - chunked
+    body: 
+      encoding: ASCII-8BIT
+      string: "{\"responseEnvelope\":{\"timestamp\":\"2013-02-06T07:40:49.638-08:00\",\"ack\":\"Success\",\"correlationId\":\"8bf33e77a98b5\",\"build\":\"4120519\"},\"invoiceID\":\"INV2-7MA7-L5TK-69FE-N5NB\",\"invoiceNumber\":\"0116\",\"invoiceURL\":\"https:\\/\\/www.sandbox.paypal.com\\/us\\/cgi-bin\\/?cmd=_inv-details&id=INV2-7MA7-L5TK-69FE-N5NB\",\"totalAmount\":\"100000\"}"
+    http_version: 
+  recorded_at: Wed, 06 Feb 2013 15:40:49 GMT
+- request: 
+    method: post
+    uri: https://svcs.sandbox.paypal.com/Invoice/CreateInvoice
+    body: 
+      encoding: UTF-8
+      string: "{\"invoice\":{\"merchantEmail\":\"chardy_1345003248_per@gmail.com\",\"payerEmail\":\"chardy_1345003165_per@gmail.com\",\"itemList\":{\"item\":[{\"name\":\"iPad mini\",\"quantity\":2,\"unitPrice\":300.0}]},\"currencyCode\":\"AUD\",\"paymentTerms\":\"Net10\"},\"requestEnvelope\":{\"errorLanguage\":\"en_US\",\"detailLevel\":\"ReturnAll\"}}"
+    headers: 
+      User-Agent: 
+      - PayPal::Payment/0.1
+      X-Paypal-Security-Userid: 
+      - chardy_api1.gmail.com
+      X-Paypal-Security-Password: 
+      - "8DTSWBZC7GDR3T4X"
+      X-Paypal-Security-Signature: 
+      - AG-8mOpuFhFyFOYHlaTUYn3Syf15AWJKRnfHMVsmCtC3DK51-ENEPqLS
+      X-Paypal-Request-Data-Format: 
+      - JSON
+      X-Paypal-Response-Data-Format: 
+      - JSON
+      X-Paypal-Application-Id: 
+      - APP-80W284485P519543T
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Date: 
+      - Wed, 06 Feb 2013 15:40:52 GMT
+      Server: 
+      - Apache-Coyote/1.1
+      Cache-Control: 
+      - no-cache
+      X-Paypal-Message-Protocol: 
+      - NONE
+      X-Paypal-Response-Data-Format: 
+      - JSON
+      X-Ebay-Soa-Request-Id: 
+      - 13cb02aa-8000-a486-d637-6877ffffeafc!Invoice!10.72.109.99![]
+      X-Paypal-Operation-Name: 
+      - CreateInvoice
+      X-Paypal-Service-Name: 
+      - "{http://svcs.paypal.com/types/pt}Invoice"
+      X-Paypal-Service-Version: 
+      - 1.0.0
+      Content-Type: 
+      - application/json;charset=UTF-8
+      Set-Cookie: 
+      - Apache=10.72.109.11.1360165251065714; path=/; expires=Fri, 30-Jan-43 15:40:51 GMT
+      Vary: 
+      - Accept-Encoding
+      Transfer-Encoding: 
+      - chunked
+    body: 
+      encoding: ASCII-8BIT
+      string: "{\"responseEnvelope\":{\"timestamp\":\"2013-02-06T07:40:52.311-08:00\",\"ack\":\"Success\",\"correlationId\":\"6e4b57a4abd03\",\"build\":\"4120519\"},\"invoiceID\":\"INV2-2YC6-SAAJ-FPSE-K7VH\",\"invoiceNumber\":\"0117\",\"invoiceURL\":\"https:\\/\\/www.sandbox.paypal.com\\/us\\/cgi-bin\\/?cmd=_inv-details&id=INV2-2YC6-SAAJ-FPSE-K7VH\",\"totalAmount\":\"60000\"}"
+    http_version: 
+  recorded_at: Wed, 06 Feb 2013 15:40:52 GMT
+- request: 
+    method: post
+    uri: https://svcs.sandbox.paypal.com/Invoice/SearchInvoices
+    body: 
+      encoding: UTF-8
+      string: "{\"merchantEmail\":\"chardy_1345003248_per@gmail.com\",\"parameters\":{\"currencyCode\":\"AUD\"},\"page\":1,\"pageSize\":10,\"requestEnvelope\":{\"errorLanguage\":\"en_US\",\"detailLevel\":\"ReturnAll\"}}"
+    headers: 
+      User-Agent: 
+      - PayPal::Payment/0.1
+      X-Paypal-Security-Userid: 
+      - chardy_api1.gmail.com
+      X-Paypal-Security-Password: 
+      - "8DTSWBZC7GDR3T4X"
+      X-Paypal-Security-Signature: 
+      - AG-8mOpuFhFyFOYHlaTUYn3Syf15AWJKRnfHMVsmCtC3DK51-ENEPqLS
+      X-Paypal-Request-Data-Format: 
+      - JSON
+      X-Paypal-Response-Data-Format: 
+      - JSON
+      X-Paypal-Application-Id: 
+      - APP-80W284485P519543T
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Date: 
+      - Wed, 06 Feb 2013 15:41:00 GMT
+      Server: 
+      - Apache-Coyote/1.1
+      Cache-Control: 
+      - no-cache
+      X-Paypal-Message-Protocol: 
+      - NONE
+      X-Paypal-Response-Data-Format: 
+      - JSON
+      X-Ebay-Soa-Request-Id: 
+      - 13cb02ab-2cf0-a486-d637-6877ffffeafb!Invoice!10.72.109.99![]
+      X-Paypal-Operation-Name: 
+      - SearchInvoices
+      X-Paypal-Service-Name: 
+      - "{http://svcs.paypal.com/types/pt}Invoice"
+      X-Paypal-Service-Version: 
+      - 1.0.0
+      Content-Type: 
+      - application/json;charset=UTF-8
+      Set-Cookie: 
+      - Apache=10.72.109.11.1360165253833524; path=/; expires=Fri, 30-Jan-43 15:40:53 GMT
+      Vary: 
+      - Accept-Encoding
+      Transfer-Encoding: 
+      - chunked
+    body: 
+      encoding: ASCII-8BIT
+      string: "{\"responseEnvelope\":{\"timestamp\":\"2013-02-06T07:41:00.484-08:00\",\"ack\":\"Success\",\"correlationId\":\"969dbebbaa7d4\",\"build\":\"4120519\"},\"count\":\"8\",\"invoiceList\":{\"invoice\":[{\"invoiceID\":\"INV2-2YC6-SAAJ-FPSE-K7VH\",\"merchantEmail\":\"chardy_1345003248_per@gmail.com\",\"payerEmail\":\"chardy_1345003165_per@gmail.com\",\"number\":\"0117\",\"totalAmount\":\"600.00\",\"currencyCode\":\"AUD\",\"invoiceDate\":\"2013-02-06T12:00:00.000-08:00\",\"dueDate\":\"2013-02-16T12:00:00.000-08:00\",\"status\":\"Draft\",\"origin\":\"API\"},{\"invoiceID\":\"INV2-4KDV-NZGP-553K-9YEW\",\"merchantEmail\":\"chardy_1345003248_per@gmail.com\",\"payerEmail\":\"chardy_1345003165_per@gmail.com\",\"number\":\"0115\",\"totalAmount\":\"600.00\",\"currencyCode\":\"AUD\",\"invoiceDate\":\"2013-02-06T12:00:00.000-08:00\",\"dueDate\":\"2013-02-16T12:00:00.000-08:00\",\"status\":\"Draft\",\"origin\":\"API\"},{\"invoiceID\":\"INV2-KGYW-EUR7-L387-ADXB\",\"merchantEmail\":\"chardy_1345003248_per@gmail.com\",\"payerEmail\":\"chardy_1345003165_per@gmail.com\",\"number\":\"0113\",\"totalAmount\":\"600.00\",\"currencyCode\":\"AUD\",\"invoiceDate\":\"2013-02-06T12:00:00.000-08:00\",\"dueDate\":\"2013-02-16T12:00:00.000-08:00\",\"status\":\"Draft\",\"origin\":\"API\"},{\"invoiceID\":\"INV2-PSRP-5AWX-V2RV-2DPX\",\"merchantEmail\":\"chardy_1345003248_per@gmail.com\",\"payerEmail\":\"chardy_1345003165_per@gmail.com\",\"number\":\"0111\",\"totalAmount\":\"600.00\",\"currencyCode\":\"AUD\",\"invoiceDate\":\"2013-02-06T12:00:00.000-08:00\",\"dueDate\":\"2013-02-16T12:00:00.000-08:00\",\"status\":\"Draft\",\"origin\":\"API\"},{\"invoiceID\":\"INV2-PNC3-B6FQ-VZ7K-7AF8\",\"merchantEmail\":\"chardy_1345003248_per@gmail.com\",\"payerEmail\":\"chardy_1345003165_per@gmail.com\",\"number\":\"0109\",\"totalAmount\":\"600.00\",\"currencyCode\":\"AUD\",\"invoiceDate\":\"2013-02-06T12:00:00.000-08:00\",\"dueDate\":\"2013-02-16T12:00:00.000-08:00\",\"status\":\"Draft\",\"origin\":\"API\"},{\"invoiceID\":\"INV2-2HWF-TZDQ-EFXV-CML5\",\"merchantEmail\":\"chardy_1345003248_per@gmail.com\",\"payerEmail\":\"chardy_1345003165_per@gmail.com\",\"number\":\"0107\",\"totalAmount\":\"600.00\",\"currencyCode\":\"AUD\",\"invoiceDate\":\"2013-02-06T12:00:00.000-08:00\",\"dueDate\":\"2013-02-16T12:00:00.000-08:00\",\"status\":\"Draft\",\"origin\":\"API\"},{\"invoiceID\":\"INV2-L44W-ZN39-PLKH-WHZW\",\"merchantEmail\":\"chardy_1345003248_per@gmail.com\",\"payerEmail\":\"chardy_1345003165_per@gmail.com\",\"number\":\"0105\",\"totalAmount\":\"600.00\",\"currencyCode\":\"AUD\",\"invoiceDate\":\"2013-02-06T12:00:00.000-08:00\",\"dueDate\":\"2013-02-16T12:00:00.000-08:00\",\"status\":\"Draft\",\"origin\":\"API\"},{\"invoiceID\":\"INV2-BUSG-SBQQ-ZTDZ-858K\",\"merchantEmail\":\"chardy_1345003248_per@gmail.com\",\"payerEmail\":\"chardy_1345003165_per@gmail.com\",\"number\":\"0103\",\"totalAmount\":\"600.00\",\"currencyCode\":\"AUD\",\"invoiceDate\":\"2013-02-06T12:00:00.000-08:00\",\"dueDate\":\"2013-02-16T12:00:00.000-08:00\",\"status\":\"Draft\",\"origin\":\"API\"}]},\"page\":\"1\",\"hasNextPage\":\"false\",\"hasPreviousPage\":\"false\"}"
+    http_version: 
+  recorded_at: Wed, 06 Feb 2013 15:41:01 GMT
+recorded_with: VCR 2.3.0

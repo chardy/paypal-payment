@@ -1,0 +1,17 @@
+.DS_Store
+pkg
+tmp
+examples
+.bundle
+db/*.sqlite3*
+log/*.log
+*.log
+tmp/**/*
+tmp/*
+doc/api
+doc/app
+*.swp
+*~
+.DS_Store
+.rvmrc
+Gemfile.lock

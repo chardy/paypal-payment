@@ -1,0 +1,32 @@
+--- 
+http_interactions: 
+- request: 
+    method: post
+    uri: https://api-3t.sandbox.paypal.com/nvp
+    body: 
+      encoding: US-ASCII
+      string: USER=chardy_api1.gmail.com&PWD=8DTSWBZC7GDR3T4X&SIGNATURE=AG-8mOpuFhFyFOYHlaTUYn3Syf15AWJKRnfHMVsmCtC3DK51-ENEPqLS&VERSION=72.0&TRANSACTIONID=aaa&method=GetTransactionDetails
+    headers: 
+      User-Agent: 
+      - PayPal::Payment/0.1
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Date: 
+      - Thu, 21 Mar 2013 17:45:16 GMT
+      Server: 
+      - Apache
+      Content-Length: 
+      - "418"
+      Connection: 
+      - close
+      Content-Type: 
+      - text/plain; charset=utf-8
+    body: 
+      encoding: ASCII-8BIT
+      string: ADDRESSOWNER=PayPal&ADDRESSSTATUS=None&TIMESTAMP=2013%2d03%2d21T17%3a45%3a16Z&CORRELATIONID=f679d7d8441a5&ACK=Failure&VERSION=72%2e0&BUILD=5479129&L_ERRORCODE0=10004&L_SHORTMESSAGE0=Transaction%20refused%20because%20of%20an%20invalid%20argument%2e%20See%20additional%20error%20messages%20for%20details%2e&L_LONGMESSAGE0=The%20transaction%20id%20is%20not%20valid&L_SEVERITYCODE0=Error&PENDINGREASON=None&REASONCODE=None
+    http_version: 
+  recorded_at: Thu, 21 Mar 2013 17:45:16 GMT
+recorded_with: VCR 2.3.0

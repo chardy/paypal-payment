@@ -1,0 +1,32 @@
+--- 
+http_interactions: 
+- request: 
+    method: post
+    uri: https://api-3t.sandbox.paypal.com/nvp
+    body: 
+      encoding: US-ASCII
+      string: USER=chardy_api1.gmail.com&PWD=8DTSWBZC7GDR3T4X&SIGNATURE=AG-8mOpuFhFyFOYHlaTUYn3Syf15AWJKRnfHMVsmCtC3DK51-ENEPqLS&VERSION=72.0&PAYMENTREQUEST_0_AMT=10.00&AMT=10.00&PAYMENTREQUEST_0_CURRENCYCODE=BRL&CURRENCYCODE=BRL&DESC=Awesome+-+Monthly+Subscription+%28Updated%29&PAYMENTREQUEST_0_DESC=Awesome+-+Monthly+Subscription+%28Updated%29&L_BILLINGAGREEMENTDESCRIPTION0=Awesome+-+Monthly+Subscription+%28Updated%29&NOTE=Changed+Plan&PROFILEID=I-2YXA7FG2X8AJ&METHOD=UpdateRecurringPaymentsProfile
+    headers: 
+      User-Agent: 
+      - PayPal::Payment/0.1
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Date: 
+      - Wed, 27 Feb 2013 16:35:25 GMT
+      Server: 
+      - Apache
+      Content-Length: 
+      - "133"
+      Connection: 
+      - close
+      Content-Type: 
+      - text/plain; charset=utf-8
+    body: 
+      encoding: ASCII-8BIT
+      string: PROFILEID=I%2d2YXA7FG2X8AJ&TIMESTAMP=2013%2d02%2d27T16%3a35%3a27Z&CORRELATIONID=c44f8e772b94&ACK=Success&VERSION=72%2e0&BUILD=5294323
+    http_version: 
+  recorded_at: Wed, 27 Feb 2013 16:35:27 GMT
+recorded_with: VCR 2.3.0

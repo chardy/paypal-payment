@@ -1,0 +1,62 @@
+--- 
+http_interactions: 
+- request: 
+    method: post
+    uri: https://svcs.sandbox.paypal.com/AdaptivePayments/Pay
+    body: 
+      encoding: UTF-8
+      string: "{\"receiverList\":{\"receiver\":[{\"email\":\"chardy_1345003248_per@gmail.com\",\"amount\":10.0}]},\"currencyCode\":\"USD\",\"cancelUrl\":\"example.com/cancel\",\"returnUrl\":\"http://example.com/thank_you\",\"actionType\":\"CREATE\",\"requestEnvelope\":{\"errorLanguage\":\"en_US\",\"detailLevel\":\"ReturnAll\"}}"
+    headers: 
+      User-Agent: 
+      - PayPal::Payment/0.1.0
+      X-Paypal-Security-Userid: 
+      - chardy_api1.gmail.com
+      X-Paypal-Security-Password: 
+      - "8DTSWBZC7GDR3T4X"
+      X-Paypal-Security-Signature: 
+      - AG-8mOpuFhFyFOYHlaTUYn3Syf15AWJKRnfHMVsmCtC3DK51-ENEPqLS
+      X-Paypal-Request-Data-Format: 
+      - JSON
+      X-Paypal-Response-Data-Format: 
+      - JSON
+      X-Paypal-Application-Id: 
+      - APP-80W284485P519543T
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Date: 
+      - Fri, 04 Jan 2013 16:25:27 GMT
+      Server: 
+      - Apache-Coyote/1.1
+      Cache-Control: 
+      - no-cache
+      X-Ebay-Soa-Request-Id: 
+      - 13c0661a-4d70-a486-d630-a7f0ffca59c1!AdaptivePayments!10.72.109.99![]
+      X-Paypal-Operation-Name: 
+      - Pay
+      X-Paypal-Service-Name: 
+      - "{http://svcs.paypal.com/types/ap}AdaptivePayments"
+      X-Ebay-Soa-Message-Protocol: 
+      - NONE
+      X-Ebay-Soa-Response-Data-Format: 
+      - JSON
+      X-Paypal-Service-Version: 
+      - 1.0.0
+      X-Paypal-Error-Response: 
+      - "TRUE"
+      Content-Type: 
+      - application/json;charset=UTF-8
+      Set-Cookie: 
+      - Apache=10.72.109.11.1357316728016482; path=/; expires=Sun, 28-Dec-42 16:25:28 GMT
+      Vary: 
+      - Accept-Encoding
+      Transfer-Encoding: 
+      - chunked
+    body: 
+      encoding: ASCII-8BIT
+      string: "{\"responseEnvelope\":{\"timestamp\":\"2013-01-04T08:25:28.228-08:00\",\"ack\":\"Failure\",\"correlationId\":\"566a16bb402cb\",\"build\":\"4110101\"},\"error\":[{\"errorId\":\"580028\",\"domain\":\"PLATFORM\",\"subdomain\":\"Application\",\"severity\":\"Error\",\"category\":\"Application\",\"message\":\"The URL example.com\\/cancel is malformed\",\"parameter\":[\"example.com\\/cancel\"]}]}"
+    http_version: 
+  recorded_at: Fri, 04 Jan 2013 16:25:28 GMT
+recorded_with: VCR 2.3.0

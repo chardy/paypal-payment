@@ -1,0 +1,117 @@
+--- 
+http_interactions: 
+- request: 
+    method: post
+    uri: https://svcs.sandbox.paypal.com/Invoice/CreateAndSendInvoice
+    body: 
+      encoding: UTF-8
+      string: "{\"invoice\":{\"merchantEmail\":\"chardy_1345003248_per@gmail.com\",\"payerEmail\":\"chardy_1345003165_per@gmail.com\",\"itemList\":{\"item\":[{\"name\":\"iPhone 5\",\"quantity\":1,\"unitPrice\":1000.0}]},\"currencyCode\":\"USD\",\"paymentTerms\":\"Net30\"},\"requestEnvelope\":{\"errorLanguage\":\"en_US\",\"detailLevel\":\"ReturnAll\"}}"
+    headers: 
+      User-Agent: 
+      - PayPal::Payment/0.1.0
+      X-Paypal-Security-Userid: 
+      - chardy_api1.gmail.com
+      X-Paypal-Security-Password: 
+      - "8DTSWBZC7GDR3T4X"
+      X-Paypal-Security-Signature: 
+      - AG-8mOpuFhFyFOYHlaTUYn3Syf15AWJKRnfHMVsmCtC3DK51-ENEPqLS
+      X-Paypal-Request-Data-Format: 
+      - JSON
+      X-Paypal-Response-Data-Format: 
+      - JSON
+      X-Paypal-Application-Id: 
+      - APP-80W284485P519543T
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Date: 
+      - Sun, 27 Jan 2013 16:19:13 GMT
+      Server: 
+      - Apache-Coyote/1.1
+      Cache-Control: 
+      - no-cache
+      X-Paypal-Message-Protocol: 
+      - NONE
+      X-Paypal-Response-Data-Format: 
+      - JSON
+      X-Ebay-Soa-Request-Id: 
+      - 13c7cce2-a420-a486-d637-6877fffffe8c!Invoice!10.72.109.99![]
+      X-Paypal-Operation-Name: 
+      - CreateAndSendInvoice
+      X-Paypal-Service-Name: 
+      - "{http://svcs.paypal.com/types/pt}Invoice"
+      X-Paypal-Service-Version: 
+      - 1.0.0
+      Content-Type: 
+      - application/json;charset=UTF-8
+      Set-Cookie: 
+      - Apache=10.72.109.11.1359303551547337; path=/; expires=Tue, 20-Jan-43 16:19:11 GMT
+      Vary: 
+      - Accept-Encoding
+      Transfer-Encoding: 
+      - chunked
+    body: 
+      encoding: ASCII-8BIT
+      string: "{\"responseEnvelope\":{\"timestamp\":\"2013-01-27T08:19:13.099-08:00\",\"ack\":\"Success\",\"correlationId\":\"bf9f7d97e2b31\",\"build\":\"4120519\"},\"invoiceID\":\"INV2-2SMN-67VL-5T6M-KSBP\",\"invoiceNumber\":\"0063\",\"invoiceURL\":\"https:\\/\\/www.sandbox.paypal.com\\/us\\/cgi-bin\\/?cmd=_inv-details&id=INV2-2SMN-67VL-5T6M-KSBP\",\"totalAmount\":\"100000\"}"
+    http_version: 
+  recorded_at: Sun, 27 Jan 2013 16:19:13 GMT
+- request: 
+    method: post
+    uri: https://svcs.sandbox.paypal.com/Invoice/GetInvoiceDetails
+    body: 
+      encoding: UTF-8
+      string: "{\"invoiceID\":\"INV2-2SMN-67VL-5T6M-KSBP\",\"requestEnvelope\":{\"errorLanguage\":\"en_US\",\"detailLevel\":\"ReturnAll\"}}"
+    headers: 
+      User-Agent: 
+      - PayPal::Payment/0.1.0
+      X-Paypal-Security-Userid: 
+      - chardy_api1.gmail.com
+      X-Paypal-Security-Password: 
+      - "8DTSWBZC7GDR3T4X"
+      X-Paypal-Security-Signature: 
+      - AG-8mOpuFhFyFOYHlaTUYn3Syf15AWJKRnfHMVsmCtC3DK51-ENEPqLS
+      X-Paypal-Request-Data-Format: 
+      - JSON
+      X-Paypal-Response-Data-Format: 
+      - JSON
+      X-Paypal-Application-Id: 
+      - APP-80W284485P519543T
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Date: 
+      - Sun, 27 Jan 2013 16:19:15 GMT
+      Server: 
+      - Apache-Coyote/1.1
+      Cache-Control: 
+      - no-cache
+      X-Paypal-Message-Protocol: 
+      - NONE
+      X-Paypal-Response-Data-Format: 
+      - JSON
+      X-Ebay-Soa-Request-Id: 
+      - 13c7cce3-63b0-a486-d637-6877fffffe8b!Invoice!10.72.109.99![]
+      X-Paypal-Operation-Name: 
+      - GetInvoiceDetails
+      X-Paypal-Service-Name: 
+      - "{http://svcs.paypal.com/types/pt}Invoice"
+      X-Paypal-Service-Version: 
+      - 1.0.0
+      Content-Type: 
+      - application/json;charset=UTF-8
+      Set-Cookie: 
+      - Apache=10.72.109.11.1359303554612620; path=/; expires=Tue, 20-Jan-43 16:19:14 GMT
+      Vary: 
+      - Accept-Encoding
+      Transfer-Encoding: 
+      - chunked
+    body: 
+      encoding: ASCII-8BIT
+      string: "{\"responseEnvelope\":{\"timestamp\":\"2013-01-27T08:19:15.174-08:00\",\"ack\":\"Success\",\"correlationId\":\"d1dde153e374f\",\"build\":\"4120519\"},\"invoice\":{\"merchantEmail\":\"chardy_1345003248_per@gmail.com\",\"payerEmail\":\"chardy_1345003165_per@gmail.com\",\"number\":\"0063\",\"itemList\":{\"item\":[{\"name\":\"iPhone 5\",\"quantity\":\"1.000\",\"unitPrice\":\"1000.00\"}]},\"currencyCode\":\"USD\",\"invoiceDate\":\"2013-01-27T12:00:00.000-08:00\",\"dueDate\":\"2013-02-26T12:00:00.000-08:00\",\"paymentTerms\":\"Net30\",\"discountAmount\":\"0.00\",\"shippingAmount\":\"0.00\"},\"invoiceDetails\":{\"status\":\"Sent\",\"totalAmount\":\"1000.00\",\"origin\":\"API\",\"createdDate\":\"2013-01-27T08:19:12.000-08:00\",\"createdBy\":\"chardy_1345003248_per@gmail.com\",\"lastUpdatedDate\":\"2013-01-27T08:19:12.000-08:00\",\"firstSentDate\":\"2013-01-27T08:19:12.000-08:00\",\"lastSentDate\":\"2013-01-27T08:19:12.000-08:00\",\"lastSentBy\":\"chardy_1345003248_per@gmail.com\"},\"invoiceURL\":\"https:\\/\\/www.sandbox.paypal.com\\/us\\/cgi-bin\\/?cmd=_inv-details&id=INV2-2SMN-67VL-5T6M-KSBP\"}"
+    http_version: 
+  recorded_at: Sun, 27 Jan 2013 16:19:15 GMT
+recorded_with: VCR 2.3.0

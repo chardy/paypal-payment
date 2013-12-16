@@ -1,0 +1,32 @@
+--- 
+http_interactions: 
+- request: 
+    method: post
+    uri: https://api-3t.sandbox.paypal.com/nvp
+    body: 
+      encoding: US-ASCII
+      string: USER=chardy_api1.gmail.com&PWD=8DTSWBZC7GDR3T4X&SIGNATURE=AG-8mOpuFhFyFOYHlaTUYn3Syf15AWJKRnfHMVsmCtC3DK51-ENEPqLS&VERSION=72.0&PROFILEID=invalid&METHOD=GetRecurringPaymentsProfileDetails
+    headers: 
+      User-Agent: 
+      - PayPal::Payment/0.1
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Date: 
+      - Wed, 27 Feb 2013 16:07:42 GMT
+      Server: 
+      - Apache
+      Content-Length: 
+      - "254"
+      Connection: 
+      - close
+      Content-Type: 
+      - text/plain; charset=utf-8
+    body: 
+      encoding: ASCII-8BIT
+      string: PROFILEID=invalid&TIMESTAMP=2013%2d02%2d27T16%3a07%3a42Z&CORRELATIONID=c88ac8cc5f70c&ACK=Failure&VERSION=72%2e0&BUILD=5294323&L_ERRORCODE0=11552&L_SHORTMESSAGE0=Invalid%20profile%20ID&L_LONGMESSAGE0=The%20profile%20ID%20is%20invalid&L_SEVERITYCODE0=Error
+    http_version: 
+  recorded_at: Wed, 27 Feb 2013 16:07:42 GMT
+recorded_with: VCR 2.3.0

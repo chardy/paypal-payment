@@ -1,0 +1,61 @@
+--- 
+http_interactions: 
+- request: 
+    method: post
+    uri: https://api-3t.sandbox.paypal.com/nvp
+    body: 
+      encoding: US-ASCII
+      string: USER=chardy_api1.gmail.com&PWD=8DTSWBZC7GDR3T4X&SIGNATURE=AG-8mOpuFhFyFOYHlaTUYn3Syf15AWJKRnfHMVsmCtC3DK51-ENEPqLS&VERSION=72.0&TOKEN=EC-2EV77664BK856305S&method=GetExpressCheckoutDetails
+    headers: 
+      User-Agent: 
+      - PayPal::Payment/0.1
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Date: 
+      - Sun, 17 Mar 2013 18:11:23 GMT
+      Server: 
+      - Apache
+      Content-Length: 
+      - "1509"
+      Connection: 
+      - close
+      Content-Type: 
+      - text/plain; charset=utf-8
+    body: 
+      encoding: ASCII-8BIT
+      string: TOKEN=EC%2d2EV77664BK856305S&BILLINGAGREEMENTACCEPTEDSTATUS=1&CHECKOUTSTATUS=PaymentActionNotInitiated&TIMESTAMP=2013%2d03%2d17T18%3a11%3a23Z&CORRELATIONID=114711c843bfa&ACK=Success&VERSION=72%2e0&BUILD=5451042&EMAIL=chardy_1345003165_per%40gmail%2com&PAYERID=4YLKLC48QZJ6Y&PAYERSTATUS=unverified&FIRSTNAME=Chardy&LASTNAME=Wang&COUNTRYCODE=US&SHIPTONAME=Chardy%Wang&SHIPTOSTREET=1%20Main%20St&SHIPTOCITY=San%20Jose&SHIPTOSTATE=CA&SHIPTOZIP=95131&SHIPTOCOUNTRYCODE=US&SHIPTOCOUNTRYNAME=United%20States&ADDRESSSTATUS=Confirmed&CURRENCYCODE=USD&AMT=9%2e00&SHIPPINGAMT=0%2e00&HANDLINGAMT=0%2e00&TAXAMT=0%2e00&DESC=Awesome%20%2d%20Monthly%20Subscription&NOTIFYURL=http%3a%2f%2fexample%2ecom%2fpaypal%2fipn&INSURANCEAMT=0%2e00&SHIPDISCAMT=0%2e00&PAYMENTREQUEST_0_CURRENCYCODE=USD&PAYMENTREQUEST_0_AMT=9%2e00&PAYMENTREQUEST_0_SHIPPINGAMT=0%2e00&PAYMENTREQUEST_0_HANDLINGAMT=0%2e00&PAYMENTREQUEST_0_TAXAMT=0%2e00&PAYMENTREQUEST_0_DESC=Awesome%20%2d%20Monthly%20Subscription&PAYMENTREQUEST_0_NOTIFYURL=http%3a%2f%2fexample%2ecom%2fpaypal%2fipn&PAYMENTREQUEST_0_INSURANCEAMT=0%2e00&PAYMENTREQUEST_0_SHIPDISCAMT=0%2e00&PAYMENTREQUEST_0_INSURANCEOPTIONOFFERED=false&PAYMENTREQUEST_0_SHIPTONAME=Chardy%Wang&PAYMENTREQUEST_0_SHIPTOSTREET=1%20Main%20St&PAYMENTREQUEST_0_SHIPTOCITY=San%20Jose&PAYMENTREQUEST_0_SHIPTOSTATE=CA&PAYMENTREQUEST_0_SHIPTOZIP=95131&PAYMENTREQUEST_0_SHIPTOCOUNTRYCODE=US&PAYMENTREQUEST_0_SHIPTOCOUNTRYNAME=United%20States&PAYMENTREQUEST_0_ADDRESSSTATUS=Confirmed&PAYMENTREQUESTINFO_0_ERRORCODE=0
+    http_version: 
+  recorded_at: Sun, 17 Mar 2013 18:11:24 GMT
+- request: 
+    method: post
+    uri: https://api-3t.sandbox.paypal.com/nvp
+    body: 
+      encoding: US-ASCII
+      string: USER=chardy_api1.gmail.com&PWD=8DTSWBZC7GDR3T4X&SIGNATURE=AG-8mOpuFhFyFOYHlaTUYn3Syf15AWJKRnfHMVsmCtC3DK51-ENEPqLS&VERSION=72.0&PROFILESTARTDATE=2013-03-17T18%3A11%3A24Z&DESC=Awesome+-+Monthly+Subscription&MAXFAILEDPAYMENTS=1&AUTOBILLOUTAMT=AddToNextBilling&PROFILEREFERENCE=1234&AMT=9.00&CURRENCYCODE=USD&BILLINGPERIOD=Month&BILLINGFREQUENCY=1&INITAMT=9.00&FAILEDINITAMTACTION=CancelOnFailure&TOKEN=EC-2EV77664BK856305S&PAYERID=4YLKLC48QZJ6Y&method=CreateRecurringPaymentsProfile
+    headers: 
+      User-Agent: 
+      - PayPal::Payment/0.1
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Date: 
+      - Sun, 17 Mar 2013 18:11:25 GMT
+      Server: 
+      - Apache
+      Content-Length: 
+      - "163"
+      Connection: 
+      - close
+      Content-Type: 
+      - text/plain; charset=utf-8
+    body: 
+      encoding: ASCII-8BIT
+      string: PROFILEID=I%2d3LJF616J1FB7&PROFILESTATUS=PendingProfile&TIMESTAMP=2013%2d03%2d17T18%3a11%3a26Z&CORRELATIONID=f4ac16bc6a0a0&ACK=Success&VERSION=72%2e0&BUILD=5294323
+    http_version: 
+  recorded_at: Sun, 17 Mar 2013 18:11:26 GMT
+recorded_with: VCR 2.3.0

@@ -1,0 +1,62 @@
+--- 
+http_interactions: 
+- request: 
+    method: post
+    uri: https://svcs.sandbox.paypal.com/AdaptivePayments/ExecutePayment
+    body: 
+      encoding: UTF-8
+      string: "{\"payKey\":\"AP-4E8509886U908932M\",\"requestEnvelope\":{\"errorLanguage\":\"en_US\",\"detailLevel\":\"ReturnAll\"}}"
+    headers: 
+      User-Agent: 
+      - PayPal::Payment/0.1.0
+      X-Paypal-Security-Userid: 
+      - chardy_api1.gmail.com
+      X-Paypal-Security-Password: 
+      - "8DTSWBZC7GDR3T4X"
+      X-Paypal-Security-Signature: 
+      - AG-8mOpuFhFyFOYHlaTUYn3Syf15AWJKRnfHMVsmCtC3DK51-ENEPqLS
+      X-Paypal-Request-Data-Format: 
+      - JSON
+      X-Paypal-Response-Data-Format: 
+      - JSON
+      X-Paypal-Application-Id: 
+      - APP-80W284485P519543T
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Date: 
+      - Fri, 18 Jan 2013 07:37:04 GMT
+      Server: 
+      - Apache-Coyote/1.1
+      Cache-Control: 
+      - no-cache
+      X-Ebay-Soa-Request-Id: 
+      - 13c4c96e-6750-a486-d636-a986fff96df5!AdaptivePayments!10.72.109.99![]
+      X-Paypal-Operation-Name: 
+      - ExecutePayment
+      X-Paypal-Service-Name: 
+      - "{http://svcs.paypal.com/types/ap}AdaptivePayments"
+      X-Ebay-Soa-Message-Protocol: 
+      - NONE
+      X-Ebay-Soa-Response-Data-Format: 
+      - JSON
+      X-Paypal-Service-Version: 
+      - 1.0.0
+      X-Paypal-Error-Response: 
+      - "TRUE"
+      Content-Type: 
+      - application/json;charset=UTF-8
+      Set-Cookie: 
+      - Apache=10.72.109.11.1358494623343634; path=/; expires=Sun, 11-Jan-43 07:37:03 GMT
+      Vary: 
+      - Accept-Encoding
+      Transfer-Encoding: 
+      - chunked
+    body: 
+      encoding: ASCII-8BIT
+      string: "{\"responseEnvelope\":{\"timestamp\":\"2013-01-17T23:37:04.084-08:00\",\"ack\":\"Failure\",\"correlationId\":\"513a15b60747f\",\"build\":\"4923149\"},\"error\":[{\"errorId\":\"580022\",\"domain\":\"PLATFORM\",\"subdomain\":\"Application\",\"severity\":\"Error\",\"category\":\"Application\",\"message\":\"payKey AP-4E8509886U908932M has already been used to make a payment\",\"parameter\":[\"AP-4E8509886U908932M\"]}]}"
+    http_version: 
+  recorded_at: Fri, 18 Jan 2013 07:37:04 GMT
+recorded_with: VCR 2.3.0

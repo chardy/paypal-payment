@@ -1,0 +1,38 @@
+Pay
+===
+ap = AdaptivePayments::Payment.new()
+ap.cancel_url = ""
+ap.return_url = ""
+ap.receivers << Receiver.new(email: '', amount: 10.00)
+ap.receivers << PrimaryReceiver.new()
+ap.create (action_type = :create)
+ap.options = (SetPaymentOptions)
+ap.options (GetPaymentOptions)
+ap.pay (pay_key ? ExecutePayment : action_type = :pay)
+ap.details (PaymentDetails)
+ap.funding_plans (GetFundingPlans)
+ap.shipping_addresses (GetShippingAddresses)
+ap.refund (Refund)
+
+PaymentDetails
+==============
+ap = AdaptivePayments::Payment.new(pay_key => '123456')
+ap.details (returns PaymentDetail)
+
+PaymentOptions
+===============
+ap = AdaptivePayments::Payment.new(pay_key => '123456')
+ap.options (GetPaymentOptions)
+ap.options =
+
+Preapproval
+===========
+app = AdaptivePayments::Preapproval.new()
+app.create
+app.details
+app.cancel
+
+Refund
+======
+ap = AdaptivePayments::Payment.new(pay_key => '123456')
+ap.refund

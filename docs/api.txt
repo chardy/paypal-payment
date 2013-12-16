@@ -1,0 +1,67 @@
+Express Checkout
+================
+
+Implemented
+===========
+AddressVerify
+BillOutstandingAmount
+DoAuthorization
+DoCapture
+DoReauthorization
+DoVoid
+GetPalDetails
+GetBalance
+ManagePendingTransactionStatus
+TransactionSearch
+GetTransactionDetails
+DoReferenceTransaction
+Callback
+
+Deprecated
+==========
+CreateBillingAgreement
+GetBillingAgreementCustomerDetails
+SetCustomerBillingAgreement
+
+* CreateRecurringPaymentsProfile
+* DoExpressCheckoutPayment
+* GetExpressCheckoutDetails
+* GetRecurringPaymentsProfileDetails
+* ManageRecurringPaymentsProfileStatus
+* RefundTransaction
+* SetExpressCheckout
+* UpdateRecurringPaymentsProfile
+
+:checkout       => "SetExpressCheckout",
+:payment        => "DoExpressCheckoutPayment",
+:details        => "GetExpressCheckoutDetails",
+:create_profile => "CreateRecurringPaymentsProfile",
+:profile        => "GetRecurringPaymentsProfileDetails",
+:manage_profile => "ManageRecurringPaymentsProfileStatus",
+:update_profile => "UpdateRecurringPaymentsProfile",
+:refund         => "RefundTransaction"
+
+Endpoints
+---------
+https://api-3t.paypal.com/nvp
+https://api-3t.sandbox.paypal.com/nvp
+
+Adaptive Payments
+=================
+CancelPreapproval
+ConvertCurrency
+ExecutePayment
+GetFundingPlans
+GetPaymentOptions
+GetShippingAddresses
+Pay
+PaymentDetails
+Preapproval
+PreapprovalDetails
+Refund
+SetPaymentOptions
+
+Endpoints
+---------
+https://svcs.paypal.com/AdaptivePayments/<API_operation>
+https://svcs.sandbox.paypal.com/AdaptivePayments/<API_operation>

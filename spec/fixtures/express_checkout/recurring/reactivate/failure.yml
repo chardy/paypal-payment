@@ -1,0 +1,32 @@
+--- 
+http_interactions: 
+- request: 
+    method: post
+    uri: https://api-3t.sandbox.paypal.com/nvp
+    body: 
+      encoding: US-ASCII
+      string: USER=chardy_api1.gmail.com&PWD=8DTSWBZC7GDR3T4X&SIGNATURE=AG-8mOpuFhFyFOYHlaTUYn3Syf15AWJKRnfHMVsmCtC3DK51-ENEPqLS&VERSION=72.0&ACTION=Reactivate&PROFILEID=I-1RFWFFS16BF4&METHOD=ManageRecurringPaymentsProfileStatus
+    headers: 
+      User-Agent: 
+      - PayPal::Payment/0.1
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Date: 
+      - Wed, 27 Feb 2013 16:01:02 GMT
+      Server: 
+      - Apache
+      Content-Length: 
+      - "367"
+      Connection: 
+      - close
+      Content-Type: 
+      - text/plain; charset=utf-8
+    body: 
+      encoding: ASCII-8BIT
+      string: TIMESTAMP=2013%2d02%2d27T16%3a01%3a02Z&CORRELATIONID=ea890bce36ca4&ACK=Failure&VERSION=72%2e0&BUILD=5294323&L_ERRORCODE0=11558&L_SHORTMESSAGE0=Invalid%20profile%20status%20for%20reactivate%20action%3b%20profile%20should%20be%20suspended&L_LONGMESSAGE0=Invalid%20profile%20status%20for%20reactivate%20action%3b%20profile%20should%20be%20suspended&L_SEVERITYCODE0=Error
+    http_version: 
+  recorded_at: Wed, 27 Feb 2013 16:01:02 GMT
+recorded_with: VCR 2.3.0

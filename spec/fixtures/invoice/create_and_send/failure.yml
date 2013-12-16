@@ -1,0 +1,62 @@
+--- 
+http_interactions: 
+- request: 
+    method: post
+    uri: https://svcs.sandbox.paypal.com/Invoice/CreateAndSendInvoice
+    body: 
+      encoding: UTF-8
+      string: "{\"invoice\":{\"currencyCode\":\"USD\"},\"requestEnvelope\":{\"errorLanguage\":\"en_US\",\"detailLevel\":\"ReturnAll\"}}"
+    headers: 
+      User-Agent: 
+      - PayPal::Payment/0.1.0
+      X-Paypal-Security-Userid: 
+      - chardy_api1.gmail.com
+      X-Paypal-Security-Password: 
+      - "8DTSWBZC7GDR3T4X"
+      X-Paypal-Security-Signature: 
+      - AG-8mOpuFhFyFOYHlaTUYn3Syf15AWJKRnfHMVsmCtC3DK51-ENEPqLS
+      X-Paypal-Request-Data-Format: 
+      - JSON
+      X-Paypal-Response-Data-Format: 
+      - JSON
+      X-Paypal-Application-Id: 
+      - APP-80W284485P519543T
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Date: 
+      - Sat, 26 Jan 2013 15:28:45 GMT
+      Server: 
+      - Apache-Coyote/1.1
+      Cache-Control: 
+      - no-cache
+      X-Paypal-Message-Protocol: 
+      - NONE
+      X-Paypal-Response-Data-Format: 
+      - JSON
+      X-Ebay-Soa-Request-Id: 
+      - 13c7779a-1620-a486-d637-6877ffffff71!Invoice!10.72.109.99![]
+      X-Paypal-Operation-Name: 
+      - CreateAndSendInvoice
+      X-Paypal-Service-Name: 
+      - "{http://svcs.paypal.com/types/pt}Invoice"
+      X-Paypal-Service-Version: 
+      - 1.0.0
+      X-Paypal-Error-Response: 
+      - "TRUE"
+      Content-Type: 
+      - application/json;charset=UTF-8
+      Set-Cookie: 
+      - Apache=10.72.109.11.1359214125402109; path=/; expires=Mon, 19-Jan-43 15:28:45 GMT
+      Vary: 
+      - Accept-Encoding
+      Transfer-Encoding: 
+      - chunked
+    body: 
+      encoding: ASCII-8BIT
+      string: "{\"responseEnvelope\":{\"timestamp\":\"2013-01-26T07:28:45.692-08:00\",\"ack\":\"Failure\",\"correlationId\":\"b68e69999a1ed\",\"build\":\"4120519\"},\"error\":[{\"errorId\":\"580022\",\"domain\":\"PLATFORM\",\"subdomain\":\"Application\",\"severity\":\"Error\",\"category\":\"Application\",\"message\":\"Invalid request parameter: merchantEmail cannot be null\",\"parameter\":[\"merchantEmail\",\"null\"]},{\"errorId\":\"580022\",\"domain\":\"PLATFORM\",\"subdomain\":\"Application\",\"severity\":\"Error\",\"category\":\"Application\",\"message\":\"Invalid request parameter: payerEmail cannot be null\",\"parameter\":[\"payerEmail\",\"null\"]},{\"errorId\":\"580022\",\"domain\":\"PLATFORM\",\"subdomain\":\"Application\",\"severity\":\"Error\",\"category\":\"Application\",\"message\":\"Invalid request parameter: paymentTerms cannot be null\",\"parameter\":[\"paymentTerms\",\"null\"]}]}"
+    http_version: 
+  recorded_at: Sat, 26 Jan 2013 15:28:45 GMT
+recorded_with: VCR 2.3.0

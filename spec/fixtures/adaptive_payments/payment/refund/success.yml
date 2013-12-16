@@ -1,0 +1,58 @@
+--- 
+http_interactions: 
+- request: 
+    method: post
+    uri: https://svcs.sandbox.paypal.com/AdaptivePayments/Refund
+    body: 
+      encoding: UTF-8
+      string: "{\"payKey\":\"AP-4E8509886U908932M\",\"currencyCode\":\"USD\",\"requestEnvelope\":{\"errorLanguage\":\"en_US\",\"detailLevel\":\"ReturnAll\"}}"
+    headers: 
+      User-Agent: 
+      - PayPal::Payment/0.1.0
+      X-Paypal-Security-Userid: 
+      - chardy_api1.gmail.com
+      X-Paypal-Security-Password: 
+      - "8DTSWBZC7GDR3T4X"
+      X-Paypal-Security-Signature: 
+      - AG-8mOpuFhFyFOYHlaTUYn3Syf15AWJKRnfHMVsmCtC3DK51-ENEPqLS
+      X-Paypal-Request-Data-Format: 
+      - JSON
+      X-Paypal-Response-Data-Format: 
+      - JSON
+      X-Paypal-Application-Id: 
+      - APP-80W284485P519543T
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Date: 
+      - Fri, 18 Jan 2013 07:25:24 GMT
+      Server: 
+      - Apache-Coyote/1.1
+      X-Ebay-Soa-Request-Id: 
+      - 13c4c8c3-a0d0-a486-d636-a986fff9700c!AdaptivePayments!10.72.109.99![]
+      X-Paypal-Operation-Name: 
+      - Refund
+      X-Paypal-Service-Name: 
+      - "{http://svcs.paypal.com/types/ap}AdaptivePayments"
+      X-Ebay-Soa-Message-Protocol: 
+      - NONE
+      X-Ebay-Soa-Response-Data-Format: 
+      - JSON
+      X-Paypal-Service-Version: 
+      - 1.0.0
+      Content-Type: 
+      - application/json;charset=UTF-8
+      Set-Cookie: 
+      - Apache=10.72.109.11.1358493923852275; path=/; expires=Sun, 11-Jan-43 07:25:23 GMT
+      Vary: 
+      - Accept-Encoding
+      Transfer-Encoding: 
+      - chunked
+    body: 
+      encoding: ASCII-8BIT
+      string: "{\"responseEnvelope\":{\"timestamp\":\"2013-01-17T23:25:25.117-08:00\",\"ack\":\"Success\",\"correlationId\":\"9ad916a9ab5fe\",\"build\":\"4923149\"},\"currencyCode\":\"USD\",\"refundInfoList\":{\"refundInfo\":[{\"receiver\":{\"amount\":\"10.00\",\"email\":\"chardy_1345003248_per@gmail.com\"},\"refundStatus\":\"ALREADY_REVERSED_OR_REFUNDED\",\"refundHasBecomeFull\":\"true\"}]}}"
+    http_version: 
+  recorded_at: Fri, 18 Jan 2013 07:25:25 GMT
+recorded_with: VCR 2.3.0

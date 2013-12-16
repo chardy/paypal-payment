@@ -1,0 +1,84 @@
+= PayPal Payment
+
+PayPal API Client for Adaptive Payments, Invoice and Express Checkout.
+
+== Installation (Gemfile)
+
+  gem 'paypal-payment', :git => 'git://vendor@appcepted.com:/home/vendor/pp_paypal'
+
+== Usage
+
+First, you need to set up your credentials:
+
+  require "paypal-payment"
+
+  PayPal::Api.configure do |config|
+    config.sandbox    = true
+    config.username   = "chardy_api1.gmail.com"
+    config.password   = "8DTSWBZC7GDR3T4X"
+    config.signature  = "AG-8mOpuFhFyFOYHlaTUYn3Syf15AWJKRnfHMVsmCtC3DK51-ENEPqLS"
+  end
+
+== Adaptive Payments
+
+You can request a new preapproval authorization:
+  pa = PayPal::AdaptivePayments::Preapproval.new(
+    :client_details => {
+      :ip_address => "234.8.8.18",
+      :device_id => "123456",
+      :application_id => "PP"
+    },
+    :starting_date => Date.today,
+    :currency_code => 'USD',
+    :max_total_amount_of_all_payments => 2000.0,
+    :cancel_url => 'http://yoursite.com/preapproval/cancel?preapprovalkey=${preapprovalkey}',
+    :return_url => 'http://yoursite.com/preapproval/accepted?preapprovalkey=${preapprovalkey}'
+  )
+
+  response = pa.create
+  puts response.approval_url if response.valid?
+
+You need to redirect your user to the url returned by <tt>response.approval_url</tt>.
+After the user accepts or rejects your preapproval request, he will be redirected to one of those urls you specified.
+Note that you need to append "preapprovalkey=${preapprovalkey}" to the urls if you want PayPal to redirect with preapprovalkey
+You can use the <tt>preapprovalkey</tt> parameter to query for the approval details.
+
+If you need to retrieve information about your buyer, like address or e-mail, you can use the
+<tt>details()</tt> method.
+
+  pa = PayPal::AdaptivePayments::Preapproval.new(:preapproval_key => "PA-89578182UL033944H")
+  response = pa.details
+
+When you need to request payment, create a new Payment with the preapproval key.
+
+  pp = PayPal::AdaptivePayments::Payment.new(
+    :preapproval_key => "PA-89578182UL033944H",
+    :receiver => {:email => "seller@example.com", :amount => 10.0},
+    :currency_code => 'USD',
+    :cancel_url => 'http://example.com/cancel',
+    :return_url => 'http://example.com/thank_you'
+  )
+
+  response = pp.pay
+  response.success?
+  response.completed?
+
+You can manage your preapproval.
+
+  pa = PayPal::AdaptivePayments::Preapproval.new(:preapproval_key => "PA-89578182UL033944H")
+  pa.cancel
+
+=== What information do I need to keep?
+
+You should save two paramaters to your database: <tt>TOKEN</tt> and <tt>PROFILEID</tt>.
+<tt>TOKEN</tt> is required when user returns to your website after he authorizes (or not) the billing process. You
+need to save it so you can find him later. You can remove this info after payment and recurring profile are set.
+
+The <tt>PROFILEID</tt> allows you to manage the recurring profile, like cancelling billing when an user don't
+want to use your service anymore.
+
+<b>NOTE:</b> TOKEN will expire after approximately 3 hours.
+
+== Maintainer
+
+* Chardy Wang

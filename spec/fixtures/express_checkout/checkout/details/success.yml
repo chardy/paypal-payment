@@ -1,0 +1,61 @@
+--- 
+http_interactions: 
+- request: 
+    method: post
+    uri: https://api-3t.sandbox.paypal.com/nvp
+    body: 
+      encoding: US-ASCII
+      string: USER=chardy_api1.gmail.com&PWD=8DTSWBZC7GDR3T4X&SIGNATURE=AG-8mOpuFhFyFOYHlaTUYn3Syf15AWJKRnfHMVsmCtC3DK51-ENEPqLS&VERSION=72.0&PAYMENTREQUEST_0_AMT=9.00&AMT=9.00&RETURNURL=http%3A%2F%2Fexample.com%2Fthank_you&CANCELURL=http%3A%2F%2Fexample.com%2Fcanceled&PAYMENTREQUEST_0_CURRENCYCODE=USD&CURRENCYCODE=USD&DESC=Awesome+-+Monthly+Subscription&PAYMENTREQUEST_0_DESC=Awesome+-+Monthly+Subscription&L_BILLINGAGREEMENTDESCRIPTION0=Awesome+-+Monthly+Subscription&PAYMENTREQUEST_0_NOTIFYURL=http%3A%2F%2Fexample.com%2Fpaypal%2Fipn&NOTIFYURL=http%3A%2F%2Fexample.com%2Fpaypal%2Fipn&PAYMENTREQUEST_0_PAYMENTACTION=Sales&METHOD=SetExpressCheckout
+    headers: 
+      User-Agent: 
+      - PayPal::Payment/0.1
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Date: 
+      - Wed, 20 Feb 2013 16:42:06 GMT
+      Server: 
+      - Apache
+      Content-Length: 
+      - "136"
+      Connection: 
+      - close
+      Content-Type: 
+      - text/plain; charset=utf-8
+    body: 
+      encoding: ASCII-8BIT
+      string: TOKEN=EC%2d57675056GD392353A&TIMESTAMP=2013%2d02%2d20T16%3a42%3a06Z&CORRELATIONID=2a41777c392be&ACK=Success&VERSION=72%2e0&BUILD=5060305
+    http_version: 
+  recorded_at: Wed, 20 Feb 2013 16:42:06 GMT
+- request: 
+    method: post
+    uri: https://api-3t.sandbox.paypal.com/nvp
+    body: 
+      encoding: US-ASCII
+      string: USER=chardy_api1.gmail.com&PWD=8DTSWBZC7GDR3T4X&SIGNATURE=AG-8mOpuFhFyFOYHlaTUYn3Syf15AWJKRnfHMVsmCtC3DK51-ENEPqLS&VERSION=72.0&TOKEN=EC-57675056GD392353A&METHOD=GetExpressCheckoutDetails
+    headers: 
+      User-Agent: 
+      - PayPal::Payment/0.1
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Date: 
+      - Wed, 20 Feb 2013 16:42:08 GMT
+      Server: 
+      - Apache
+      Content-Length: 
+      - "839"
+      Connection: 
+      - close
+      Content-Type: 
+      - text/plain; charset=utf-8
+    body: 
+      encoding: ASCII-8BIT
+      string: TOKEN=EC%2d57675056GD392353A&CHECKOUTSTATUS=PaymentActionNotInitiated&TIMESTAMP=2013%2d02%2d20T16%3a42%3a08Z&CORRELATIONID=a64ae70c45310&ACK=Success&VERSION=72%2e0&BUILD=5060305&CURRENCYCODE=USD&AMT=9%2e00&SHIPPINGAMT=0%2e00&HANDLINGAMT=0%2e00&TAXAMT=0%2e00&DESC=Awesome%20%2d%20Monthly%20Subscription&NOTIFYURL=http%3a%2f%2fexample%2ecom%2fpaypal%2fipn&INSURANCEAMT=0%2e00&SHIPDISCAMT=0%2e00&PAYMENTREQUEST_0_CURRENCYCODE=USD&PAYMENTREQUEST_0_AMT=9%2e00&PAYMENTREQUEST_0_SHIPPINGAMT=0%2e00&PAYMENTREQUEST_0_HANDLINGAMT=0%2e00&PAYMENTREQUEST_0_TAXAMT=0%2e00&PAYMENTREQUEST_0_DESC=Awesome%20%2d%20Monthly%20Subscription&PAYMENTREQUEST_0_NOTIFYURL=http%3a%2f%2fexample%2ecom%2fpaypal%2fipn&PAYMENTREQUEST_0_INSURANCEAMT=0%2e00&PAYMENTREQUEST_0_SHIPDISCAMT=0%2e00&PAYMENTREQUEST_0_INSURANCEOPTIONOFFERED=false&PAYMENTREQUESTINFO_0_ERRORCODE=0
+    http_version: 
+  recorded_at: Wed, 20 Feb 2013 16:42:08 GMT
+recorded_with: VCR 2.3.0

@@ -1,0 +1,113 @@
+--- 
+http_interactions: 
+- request: 
+    method: post
+    uri: https://svcs.sandbox.paypal.com/AdaptivePayments/Pay
+    body: 
+      encoding: UTF-8
+      string: "{\"receiverList\":{\"receiver\":[{\"email\":\"chardy_1345003248_per@gmail.com\",\"amount\":10.0}]},\"currencyCode\":\"USD\",\"cancelUrl\":\"http://example.com/cancel\",\"returnUrl\":\"http://example.com/thank_you\",\"actionType\":\"CREATE\",\"requestEnvelope\":{\"errorLanguage\":\"en_US\",\"detailLevel\":\"ReturnAll\"}}"
+    headers: 
+      User-Agent: 
+      - PayPal::Payment/0.1.0
+      X-Paypal-Security-Userid: 
+      - chardy_api1.gmail.com
+      X-Paypal-Security-Password: 
+      - "8DTSWBZC7GDR3T4X"
+      X-Paypal-Security-Signature: 
+      - AG-8mOpuFhFyFOYHlaTUYn3Syf15AWJKRnfHMVsmCtC3DK51-ENEPqLS
+      X-Paypal-Request-Data-Format: 
+      - JSON
+      X-Paypal-Response-Data-Format: 
+      - JSON
+      X-Paypal-Application-Id: 
+      - APP-80W284485P519543T
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Date: 
+      - Tue, 05 Feb 2013 07:37:48 GMT
+      Server: 
+      - Apache-Coyote/1.1
+      X-Ebay-Soa-Request-Id: 
+      - 13ca94a0-d2f0-a486-d652-b0c2fffef749!AdaptivePayments!10.72.109.101![]
+      X-Paypal-Operation-Name: 
+      - Pay
+      X-Paypal-Service-Name: 
+      - "{http://svcs.paypal.com/types/ap}AdaptivePayments"
+      X-Ebay-Soa-Message-Protocol: 
+      - NONE
+      X-Ebay-Soa-Response-Data-Format: 
+      - JSON
+      X-Paypal-Service-Version: 
+      - 1.0.0
+      Content-Type: 
+      - application/json;charset=UTF-8
+      Set-Cookie: 
+      - Apache=10.72.109.11.1360049868074098; path=/; expires=Thu, 29-Jan-43 07:37:48 GMT
+      Vary: 
+      - Accept-Encoding
+      Transfer-Encoding: 
+      - chunked
+    body: 
+      encoding: ASCII-8BIT
+      string: "{\"responseEnvelope\":{\"timestamp\":\"2013-02-04T23:37:48.861-08:00\",\"ack\":\"Success\",\"correlationId\":\"b755955ab0586\",\"build\":\"4992011\"},\"payKey\":\"AP-8R817763TY917073J\",\"paymentExecStatus\":\"CREATED\"}"
+    http_version: 
+  recorded_at: Tue, 05 Feb 2013 07:37:49 GMT
+- request: 
+    method: post
+    uri: https://svcs.sandbox.paypal.com/AdaptivePayments/PaymentDetails
+    body: 
+      encoding: UTF-8
+      string: "{\"payKey\":\"AP-8R817763TY917073J\",\"requestEnvelope\":{\"errorLanguage\":\"en_US\",\"detailLevel\":\"ReturnAll\"}}"
+    headers: 
+      User-Agent: 
+      - PayPal::Payment/0.1.0
+      X-Paypal-Security-Userid: 
+      - chardy_api1.gmail.com
+      X-Paypal-Security-Password: 
+      - "8DTSWBZC7GDR3T4X"
+      X-Paypal-Security-Signature: 
+      - AG-8mOpuFhFyFOYHlaTUYn3Syf15AWJKRnfHMVsmCtC3DK51-ENEPqLS
+      X-Paypal-Request-Data-Format: 
+      - JSON
+      X-Paypal-Response-Data-Format: 
+      - JSON
+      X-Paypal-Application-Id: 
+      - APP-80W284485P519543T
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Date: 
+      - Tue, 05 Feb 2013 07:37:50 GMT
+      Server: 
+      - Apache-Coyote/1.1
+      X-Ebay-Soa-Request-Id: 
+      - 13ca94a1-54a0-a486-d652-b0c2fffef748!AdaptivePayments!10.72.109.101![]
+      X-Paypal-Operation-Name: 
+      - PaymentDetails
+      X-Paypal-Service-Name: 
+      - "{http://svcs.paypal.com/types/ap}AdaptivePayments"
+      X-Ebay-Soa-Message-Protocol: 
+      - NONE
+      X-Ebay-Soa-Response-Data-Format: 
+      - JSON
+      X-Paypal-Service-Version: 
+      - 1.0.0
+      Content-Type: 
+      - application/json;charset=UTF-8
+      Set-Cookie: 
+      - Apache=10.72.109.11.1360049870148415; path=/; expires=Thu, 29-Jan-43 07:37:50 GMT
+      Vary: 
+      - Accept-Encoding
+      Transfer-Encoding: 
+      - chunked
+    body: 
+      encoding: ASCII-8BIT
+      string: "{\"responseEnvelope\":{\"timestamp\":\"2013-02-04T23:37:50.762-08:00\",\"ack\":\"Success\",\"correlationId\":\"c53d41e6b1dfd\",\"build\":\"4992011\"},\"cancelUrl\":\"http:\\/\\/example.com\\/cancel\",\"currencyCode\":\"USD\",\"paymentInfoList\":{\"paymentInfo\":[{\"receiver\":{\"amount\":\"10.00\",\"email\":\"chardy_1345003248_per@gmail.com\",\"primary\":\"false\",\"paymentType\":\"SERVICE\"},\"pendingRefund\":\"false\"}]},\"returnUrl\":\"http:\\/\\/example.com\\/thank_you\",\"status\":\"CREATED\",\"payKey\":\"AP-8R817763TY917073J\",\"actionType\":\"CREATE\",\"feesPayer\":\"EACHRECEIVER\",\"reverseAllParallelPaymentsOnError\":\"false\",\"sender\":{\"useCredentials\":\"false\"}}"
+    http_version: 
+  recorded_at: Tue, 05 Feb 2013 07:37:50 GMT
+recorded_with: VCR 2.3.0

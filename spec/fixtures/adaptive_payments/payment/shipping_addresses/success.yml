@@ -1,0 +1,113 @@
+--- 
+http_interactions: 
+- request: 
+    method: post
+    uri: https://svcs.sandbox.paypal.com/AdaptivePayments/Pay
+    body: 
+      encoding: UTF-8
+      string: "{\"receiverList\":{\"receiver\":[{\"email\":\"chardy_1345003248_per@gmail.com\",\"amount\":10.0}]},\"currencyCode\":\"USD\",\"cancelUrl\":\"http://example.com/cancel\",\"returnUrl\":\"http://example.com/thank_you\",\"actionType\":\"CREATE\",\"requestEnvelope\":{\"errorLanguage\":\"en_US\",\"detailLevel\":\"ReturnAll\"}}"
+    headers: 
+      User-Agent: 
+      - PayPal::Payment/0.1.0
+      X-Paypal-Security-Userid: 
+      - chardy_api1.gmail.com
+      X-Paypal-Security-Password: 
+      - "8DTSWBZC7GDR3T4X"
+      X-Paypal-Security-Signature: 
+      - AG-8mOpuFhFyFOYHlaTUYn3Syf15AWJKRnfHMVsmCtC3DK51-ENEPqLS
+      X-Paypal-Request-Data-Format: 
+      - JSON
+      X-Paypal-Response-Data-Format: 
+      - JSON
+      X-Paypal-Application-Id: 
+      - APP-80W284485P519543T
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Date: 
+      - Fri, 18 Jan 2013 08:16:56 GMT
+      Server: 
+      - Apache-Coyote/1.1
+      X-Ebay-Soa-Request-Id: 
+      - 13c4cbb6-9510-a486-d636-a986fff96401!AdaptivePayments!10.72.109.99![]
+      X-Paypal-Operation-Name: 
+      - Pay
+      X-Paypal-Service-Name: 
+      - "{http://svcs.paypal.com/types/ap}AdaptivePayments"
+      X-Ebay-Soa-Message-Protocol: 
+      - NONE
+      X-Ebay-Soa-Response-Data-Format: 
+      - JSON
+      X-Paypal-Service-Version: 
+      - 1.0.0
+      Content-Type: 
+      - application/json;charset=UTF-8
+      Set-Cookie: 
+      - Apache=10.72.109.11.1358497016143935; path=/; expires=Sun, 11-Jan-43 08:16:56 GMT
+      Vary: 
+      - Accept-Encoding
+      Transfer-Encoding: 
+      - chunked
+    body: 
+      encoding: ASCII-8BIT
+      string: "{\"responseEnvelope\":{\"timestamp\":\"2013-01-18T00:16:57.128-08:00\",\"ack\":\"Success\",\"correlationId\":\"fb61a27adf2af\",\"build\":\"4923149\"},\"payKey\":\"AP-5KW85932AY199321E\",\"paymentExecStatus\":\"CREATED\"}"
+    http_version: 
+  recorded_at: Fri, 18 Jan 2013 08:16:57 GMT
+- request: 
+    method: post
+    uri: https://svcs.sandbox.paypal.com/AdaptivePayments/GetShippingAddresses
+    body: 
+      encoding: UTF-8
+      string: "{\"key\":\"AP-5KW85932AY199321E\",\"requestEnvelope\":{\"errorLanguage\":\"en_US\",\"detailLevel\":\"ReturnAll\"}}"
+    headers: 
+      User-Agent: 
+      - PayPal::Payment/0.1.0
+      X-Paypal-Security-Userid: 
+      - chardy_api1.gmail.com
+      X-Paypal-Security-Password: 
+      - "8DTSWBZC7GDR3T4X"
+      X-Paypal-Security-Signature: 
+      - AG-8mOpuFhFyFOYHlaTUYn3Syf15AWJKRnfHMVsmCtC3DK51-ENEPqLS
+      X-Paypal-Request-Data-Format: 
+      - JSON
+      X-Paypal-Response-Data-Format: 
+      - JSON
+      X-Paypal-Application-Id: 
+      - APP-80W284485P519543T
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Date: 
+      - Fri, 18 Jan 2013 08:16:58 GMT
+      Server: 
+      - Apache-Coyote/1.1
+      X-Ebay-Soa-Request-Id: 
+      - 13c4cbb7-0890-a486-d636-a986fff963fd!AdaptivePayments!10.72.109.99![]
+      X-Paypal-Operation-Name: 
+      - GetShippingAddresses
+      X-Paypal-Service-Name: 
+      - "{http://svcs.paypal.com/types/ap}AdaptivePayments"
+      X-Ebay-Soa-Message-Protocol: 
+      - NONE
+      X-Ebay-Soa-Response-Data-Format: 
+      - JSON
+      X-Paypal-Service-Version: 
+      - 1.0.0
+      Content-Type: 
+      - application/json;charset=UTF-8
+      Set-Cookie: 
+      - Apache=10.72.109.11.1358497017991888; path=/; expires=Sun, 11-Jan-43 08:16:57 GMT
+      Vary: 
+      - Accept-Encoding
+      Transfer-Encoding: 
+      - chunked
+    body: 
+      encoding: ASCII-8BIT
+      string: "{\"responseEnvelope\":{\"timestamp\":\"2013-01-18T00:16:58.633-08:00\",\"ack\":\"Success\",\"correlationId\":\"f443ec8cdec8b\",\"build\":\"4923149\"}}"
+    http_version: 
+  recorded_at: Fri, 18 Jan 2013 08:16:58 GMT
+recorded_with: VCR 2.3.0

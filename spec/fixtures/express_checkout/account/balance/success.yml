@@ -1,0 +1,32 @@
+--- 
+http_interactions: 
+- request: 
+    method: post
+    uri: https://api-3t.sandbox.paypal.com/nvp
+    body: 
+      encoding: US-ASCII
+      string: USER=chardy_api1.gmail.com&PWD=8DTSWBZC7GDR3T4X&SIGNATURE=AG-8mOpuFhFyFOYHlaTUYn3Syf15AWJKRnfHMVsmCtC3DK51-ENEPqLS&VERSION=72.0&METHOD=GetBalance
+    headers: 
+      User-Agent: 
+      - PayPal::Payment/0.1
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Date: 
+      - Mon, 11 Mar 2013 16:10:58 GMT
+      Server: 
+      - Apache
+      Content-Length: 
+      - "143"
+      Connection: 
+      - close
+      Content-Type: 
+      - text/plain; charset=utf-8
+    body: 
+      encoding: ASCII-8BIT
+      string: L_AMT0=224%2e58&L_CURRENCYCODE0=USD&TIMESTAMP=2013%2d03%2d11T16%3a10%3a59Z&CORRELATIONID=99c14399c27b3&ACK=Success&VERSION=72%2e0&BUILD=5331358
+    http_version: 
+  recorded_at: Mon, 11 Mar 2013 16:10:59 GMT
+recorded_with: VCR 2.3.0

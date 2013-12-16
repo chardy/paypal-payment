@@ -1,0 +1,32 @@
+==============
+Paypal Library
+==============
+
+Paypal Payment Express / Website Standard
+Paypal Digital Goods
+
+Paypal Mass Payment
+
+Paypal Website Standard Recurring
+
+Paypal Adaptive Payment
+
+Paypay Invoice API
+
+API Requirements:
+
+1) Need to be non-blocking, use curb, DO NOT use net/http
+   https://rubygems.org/gems/curb
+2) Support multi threading, avoid singleton
+3) Formats:
+   Paypal::RecurringPayment
+   Paypal::ExpressPayment
+   Etc.
+4) Include test framework with test account configuration
+5) Documentation defined, with example
+6) Extensible
+7) Use paypal NVP
+8) Refer to https://github.com/fnando/paypal-recurring
+
+
+
