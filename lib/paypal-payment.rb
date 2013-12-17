@@ -1,3 +1,4 @@
+require 'rubygems'
 require 'curb'
 require 'multi_json'
 require "paypal/api"
